@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Projeto.Domain.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Projeto.Domain.Entities
 {
-   public class Favorito
+   public class Favorito : EntityBase
     {
-        public Guid Id { get; set; }
         public Video Video { get; set; }
         public Usuario Usuario { get; set; }
     }

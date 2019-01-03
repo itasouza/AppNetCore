@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Projeto.Domain.Entities.Canal">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAEAAAA=</HashCode>
+      <FileName>Entities\Canal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+      <Property Name="Nome" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projeto.Domain.Entities.Favorito">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAg=</HashCode>
+      <FileName>Entities\Favorito.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projeto.Domain.Entities.PlayList">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Entities\Playlist.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projeto.Domain.Entities.Usuario">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nome" />
+      <Property Name="Email" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projeto.Domain.Entities.Video">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAEAAQBAAAAAAAAAACQAAAAAEAAAAAAAAQAABA=</HashCode>
+      <FileName>Entities\Video.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Canal" />
+      <Property Name="PlayList" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projeto.Domain.ValueObjects.Nome">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>ValueObjects\Nome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projeto.Domain.ValueObjects.Email">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ValueObjects\Email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.String">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="Projeto.Domain.Enums.EnumStatus" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Enums\EnumStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

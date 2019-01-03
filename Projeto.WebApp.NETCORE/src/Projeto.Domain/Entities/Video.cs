@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Projeto.Domain.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Projeto.Domain.Entities
 {
-    public class Video
+    public class Video : EntityBase
     {
-        public Guid Id { get; set; }
 
         public Canal Canal { get; set; }
         public PlayList PlayList { get; set; }
