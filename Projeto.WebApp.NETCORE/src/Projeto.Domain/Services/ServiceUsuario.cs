@@ -4,6 +4,7 @@ using Projeto.Domain.Arguments.Usuario;
 using Projeto.Domain.Entities;
 using Projeto.Domain.Interfaces.Services;
 using Projeto.Domain.Resources;
+using Projeto.Domain.ValueObjects;
 using System;
 
 namespace Projeto.Domain.Services
@@ -18,33 +19,30 @@ namespace Projeto.Domain.Services
                 return null;
             }
 
-            Usuario usuario = new Usuario();
-            usuario.Nome.PrimeiroNome = "Itamar";
-            usuario.Nome.UltimoNome = "Souza";
-            usuario.Email.Endereco = "teste@teste.com.br";
-            usuario.Senha = "123456";
+            Nome nome = new Nome(request.PrimeiroNome, request.UltimoNome);
+          
 
-            if (usuario.Nome.PrimeiroNome.Length < 3 || usuario.Nome.PrimeiroNome.Length > 50)
-            {
-                throw new Exception("O primeiro nome é obrigatório e deve conter entre 3 a 50 carecteres");
-            }
-            if (usuario.Nome.UltimoNome.Length < 3 || usuario.Nome.UltimoNome.Length > 50)
-            {
-                throw new Exception("O ultimo nome é obrigatório e deve conter entre 3 a 50 carecteres");
-            }
 
-            if (usuario.Email.Endereco.IndexOf('@') < 1)
-            {
-                throw new Exception("Emasil invalido");
-            }
+            Email email = new Email(request.Email);
+            AddNotifications(email);
 
-            if (usuario.Senha.Length >= 3)
+
+           // Usuario usuario = new Usuario(nome, request.Email.ToString(), request.Senha);
+            AddNotifications(usuario);
+
+
+
+
+            //AdicionarUsuarioResponse response = new RepositoryUsuario().Salvar(usuario);
+            // return response;
+
+            if (this.IsInvalid() == true)
             {
-                throw new Exception("Senha deve ter no minimo 3 caracteres");
+                return null;
             }
 
-            AdicionarUsuarioResponse response = new RepositoryUsuario().Salvar(usuario);
-            return response;
+
+            return new AdicionarUsuarioResponse(Guid.NewGuid());
 
         }
 
